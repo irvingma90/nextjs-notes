@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { confirmAlert } from 'react-confirm-alert'; 
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import {useRouter} from 'next/router'
+import Image from 'next/image';
 
 //Frontend..
 export default function Home({ notes }) {
@@ -90,8 +91,8 @@ export default function Home({ notes }) {
         </Link>
           <div className="row ">
           {notes.map(note => (
-            <div className="col-md-4 sm-8 mt-4 mb-2">
-              <div className="card" style={{ width: "22rem"}} key={note._id}>
+            <div className="col-md-4 sm-8 mt-4 mb-2" key={note._id}>
+              <div className="card" style={{ width: "22rem"}} >
                 <div className="card-header d-flex justify-content-between">
                   <h5 className="card-title p-2">{note.title}</h5>
                 </div>
